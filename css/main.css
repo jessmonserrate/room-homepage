@@ -1,0 +1,196 @@
+
+body {
+    font-family: 'Spartan', sans-serif;
+    width: 100%;
+    margin: auto;
+    font-size: 12px;
+}
+
+.body-container {
+    width: 100%;
+}
+
+main {
+    width: 100%;
+}
+
+figure {
+    width: 100%;
+    margin: 0;
+}
+
+/* Header Styles */
+
+header {
+    width: 100%;
+}
+
+
+.header-container {
+    background-image: url("../images/desktop-image-hero-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 270px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.logo-nav-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    height: 190px;
+    width: 100%;
+}
+
+.hamburger-menu {
+    color: white;
+    margin-left: 20px;
+    text-align: top;
+}
+
+#hamburger-icon {
+    height: 50px;
+    margin: 0;
+}
+
+#hamburger-icon i {
+    min-height: 20px;
+    min-width: 30px;
+}
+
+.nav-container {
+    visibility: hidden;
+    width: 0%;
+}
+
+.logo {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 75%;
+}
+
+.arrow-buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    height: 60px;
+    width: 100px;
+}
+
+.arrow-buttons p {
+    padding: 10px;
+    max-height: 75px;
+}
+
+.fontawesome-icon {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+
+/* About Section Styles */
+
+.about-container {
+    width: 100%;
+}
+
+.about-container figure img {
+    width: inherit;
+}
+
+.about-text {
+    padding: 30px;
+    line-height: 22px;
+}
+
+.about-text h3 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.about-text p {
+    color: darkgray;
+}
+
+
+/* Shop Aside */
+
+.aside-container {
+    padding: 30px;
+    line-height: 22px;
+}
+
+.aside-container h1 {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 36px;
+}
+
+.aside-container p {
+    color: darkgray;
+}
+
+.shop-button {
+    padding: 20px 0 20px 0;
+}
+
+.shop-button p {
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: black;
+}
+
+
+
+@media only screen and (min-width:1440px) {
+/* Desktop Styles */
+
+/* Desktop Header */
+.header-container {
+    min-height: 825px;
+}
+
+.logo {
+    margin: 0 0 0 100px;
+    flex: 1;
+}
+
+.nav-container {
+    display: flex;
+    align-items: flex-end;
+    flex: 3;
+}
+
+.header-container nav {
+    width: 100%;
+}
+
+.header-container nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    list-style-type: none;
+    text-transform: lowercase;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.header-container nav ul li {
+    flex: 1;
+    font-weight: 500;
+}

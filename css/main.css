@@ -25,52 +25,79 @@ header {
     width: 100%;
 }
 
-
 .header-container {
-    background-image: url("../images/desktop-image-hero-1.jpg");
+    background-image: url("../images/mobile-image-hero-1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 270px;
+    background-position: center;
+    min-height: 360px;
+    min-width: 375px;
     display: flex;
     flex-flow: column wrap;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: flex-end;
 }
 
 .logo-nav-container {
     display: flex;
     flex-flow: row nowrap;
-    align-items: flex-start;
-    height: 190px;
+    align-items: center;
+    height: 100px;
     width: 100%;
 }
 
 .hamburger-menu {
     color: white;
-    margin-left: 20px;
-    text-align: top;
+    margin-left: 30px;
 }
 
-#hamburger-icon {
+#nav-icon {
+    display: flex;
+    align-items: center;
     height: 50px;
     margin: 0;
+    cursor: pointer;
 }
 
-#hamburger-icon i {
+#nav-icon i {
     min-height: 20px;
     min-width: 30px;
+    font-size: 20px;
 }
+
 
 .nav-container {
     visibility: hidden;
-    width: 0%;
+    width: 100%;
+}
+
+
+.header-container nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    list-style-type: none;
+    text-transform: lowercase;
+    margin: 0;
+    padding: 0;
+}
+
+.header-container nav ul li {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+a.middle {
+    text-decoration: none;
+    color: black;
 }
 
 .logo {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: center;
-    width: 75%;
+    width: 70%;
 }
 
 .arrow-buttons {
@@ -100,6 +127,14 @@ header {
     font-weight: 400;
 }
 
+
+#right-button, #left-button {
+    cursor: pointer;
+}
+
+#right-button:hover, #left-button:hover {
+    background-color: gray;
+}
 
 /* About Section Styles */
 
@@ -151,6 +186,7 @@ header {
     letter-spacing: 8px;
     text-transform: uppercase;
     color: black;
+    cursor: pointer;
 }
 
 
@@ -158,24 +194,49 @@ header {
 @media only screen and (min-width:1440px) {
 /* Desktop Styles */
 
+body {
+    max-width: 1440px;
+}
+
 /* Desktop Header */
+
+.hero-slide-container {
+    display: flex;
+    flex-flow: row nowrap;
+    min-height: 500px;
+}
+
 .header-container {
-    min-height: 825px;
+    background-image: url("../images/desktop-image-hero-1.jpg");
+    background-position: left top;
+    background-size: 864px 500px;
+    max-height: 534px;
+    flex: 3 900px;
+}
+
+.logo-nav-container {
+    padding-top: 10px;
 }
 
 .logo {
-    margin: 0 0 0 100px;
-    flex: 1;
+    margin: 0 40px 0 0;
+    width: 62px;
+}
+
+.hamburger-menu {
+    visibility: hidden;
 }
 
 .nav-container {
     display: flex;
     align-items: flex-end;
-    flex: 3;
+    visibility: visible;
+    width: 60%;
+    background-color: transparent;
 }
 
 .header-container nav {
-    width: 100%;
+    width: 50%;
 }
 
 .header-container nav ul {
@@ -193,4 +254,95 @@ header {
 .header-container nav ul li {
     flex: 1;
     font-weight: 500;
+}
+
+a.middle {
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+
+a.middle:before {
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -10px;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+a.middle:hover:before {
+    visibility: visible;
+    transform: scaleX(.50);
+}
+
+/* Desktop Shop Aside */
+
+aside {
+    flex: 1 600px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end; 
+    max-height: 534px;
+}
+
+.aside-container {
+    padding: 0;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    min-height: 500px;
+}
+
+
+
+.arrow-buttons {
+    width: 135px;
+    justify-content: space-around;
+}
+
+
+.aside-container h1 {
+    padding: 50px 50px 0 50px;
+    margin: 25px 50px 0 50px;
+    font-size: 34px;
+    line-height: 40px;
+}
+
+.aside-container #aside-text {
+    padding: 0 50px 0 50px;
+    margin: 0 50px 0 50px;
+}
+
+.shop-button {
+    padding: 0 0 20px 100px;
+}
+
+
+/* Desktop About Section Styles */
+
+.about-container {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.about-text {
+    flex: 1.12;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.about-container figure {
+    flex: 1;
+}
+
+figure img {
+    min-height: 280.13px;
 }
